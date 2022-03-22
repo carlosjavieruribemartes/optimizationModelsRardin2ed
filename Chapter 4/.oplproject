@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+	<version>1.0</version>
+	<description>Application 4.1</description>
+	<configs>
+		<config default="true" name="conf_ForestServiceAllocation" category="opl">
+			<ref name="ForestServiceAllocation.mod" type="model">
+			</ref>
+			<ref name="ForestServiceAllocation.dat" type="data">
+			</ref>
+		</config>
+		<config default="false" name="conf_Ex_4_1" category="opl">
+			<ref name="Example_4_1_FormulatingAllocationModels.mod" type="model">
+			</ref>
+			<ref name="Example_4_1.dat" type="data">
+			</ref>
+		</config>
+	</configs>
+	
+</project>

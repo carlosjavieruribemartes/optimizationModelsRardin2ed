@@ -1,0 +1,12 @@
+/*********************************************
+ * OPL 20.1.0.0 Data
+ * Author: CarlosJavier
+ * Creation Date: 22/03/2022 at 11:15:54 a. m.
+ *********************************************/
+ 
+ Courses = {"Operations Research", "Engineering Economics", "Statistics", "Material Science"};
+ 
+ TotalHoursAvailable = 30;
+ MaxHour = 10;
+ BenefitPerHour = [2, 3, 1, 5];
+ 
