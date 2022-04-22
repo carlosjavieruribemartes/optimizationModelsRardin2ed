@@ -1,0 +1,16 @@
+/*********************************************
+ * OPL 20.1.0.0 Data
+ * Author: CarlosJavier
+ * Creation Date: 28/03/2022 at 2:34:41 p. m.
+ *********************************************/
+ 
+ Log_availability_per_month = [[200, 300], [100, 1000]];
+ Cost_per_log = [[340, 190], [490, 140]];
+ Yield_per_log = [[[400, 700, 900], [200, 500, 1300]], [[200, 350, 450], [100, 250, 650]]];
+ Green_veener_availability_per_month = [[5000, 25000, 40000], [10000, 40000, 50000]];
+ Cost_per_green_veener = [[1.00, 0.30, 0.10], [2.20, 0.60, 0.20]];
+ Plywood_price = [[[0, 45, 40], [0, 0, 33], [0, 0, 0]], [[0, 75, 65], [0, 0, 50], [0, 0, 0]]];
+ Plywood_market_per_month = [[[0, 1000, 4000], [0, 0, 8000], [0, 0, 0]], [[0, 1000, 5000], [0, 0, 8000], [0, 0, 0]]];
+ Plywood_pressing_time = [0.25, 0.45];
+ Monthly_capacity_for_pressing = 4500;
+ Green_veneer_yield = 35;
