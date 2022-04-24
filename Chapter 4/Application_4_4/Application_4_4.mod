@@ -20,9 +20,11 @@
  float Cost_per_green_veener[VeneerThickness][VeneerGrade] = ...;
  float Plywood_price[PlywoodThickness][VeneerGrade][VeneerGrade] = ...;
  float Plywood_market_per_month[PlywoodThickness][VeneerGrade][VeneerGrade] = ...;
- float Plywood_pressing_time[PlywoodThickness] = ...;
+ float Plywood_pressing_time[PlywoodThickness][VeneerGrade][VeneerGrade] = ...;
  float Monthly_capacity_for_pressing = ...;
  float Green_veneer_yield = ...;
+ float Composition[VeneerThickness][VeneerGrade][PlywoodThickness][VeneerGrade][VeneerGrade] = ...;
+ float Balance_veneer[VeneerGrade][VeneerGrade] = ...;
 
  // DECISION VARIABLES
  dvar float+ w[LogQ][LogVendor][VeneerThickness]; 	// Number of logs of quality q bought from vendor v and peeled into green veneer of thickness t per month
@@ -43,7 +45,7 @@
    forall(v in LogVendor, q in LogQ) sum(t in VeneerThickness) w[q][v][t]<=Log_availability_per_month[v][q]; 			// Log availability limits  
    forall(t in VeneerThickness, g in VeneerGrade) x[t][g]<= Green_veener_availability_per_month[t][g]; 					// Purchased veneer availabilities
    forall(p in PlywoodThickness, g in VeneerGrade, h in VeneerGrade) z[p][g][h] <= Plywood_market_per_month[p][g][h]; 	// Market sizes constrain
-   sum(p in PlywoodThickness, g in VeneerGrade, h in VeneerGrade) z[p][g][h]*Plywood_pressing_time[p] <= Monthly_capacity_for_pressing; // Pressing capacity limit
-   forall(t in VeneerThickness, g in VeneerGrade) sum(q in LogQ, v in LogVendor) Yield_per_log[q][t][g]*w[q][v][t] + x[t][g] >= Green_veneer_yield * sum(h in VeneerGrade) y[t][g][h];
-   forall(t in VeneerThickness, h in VeneerGrade) sum(g in VeneerGrade) y[t][g][h] == sum(p in PlywoodThickness, g in VeneerGrade) z[p][h][g];
+   sum(p in PlywoodThickness, g in VeneerGrade, h in VeneerGrade) z[p][g][h]*Plywood_pressing_time[p][g][h] <= Monthly_capacity_for_pressing; // Pressing capacity limit
+   forall(t in VeneerThickness, g in VeneerGrade) x[t][g] + sum(q in LogQ, v in LogVendor) Yield_per_log[q][t][g]*w[q][v][t] >= sum(h in VeneerGrade) Green_veneer_yield*Balance_veneer[g][h]*y[t][g][h];
+   forall(t in VeneerThickness, h in VeneerGrade) sum(g in VeneerGrade) Balance_veneer[g][h]*y[t][g][h] == sum(p in PlywoodThickness, g in VeneerGrade, j in VeneerGrade) Composition[t][h][p][g][j]*z[p][g][j];
  }
