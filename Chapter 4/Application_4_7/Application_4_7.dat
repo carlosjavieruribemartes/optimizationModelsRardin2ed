@@ -1,0 +1,10 @@
+/*********************************************
+ * OPL 20.1.0.0 Data
+ * Author: CarlosJavier
+ * Creation Date: 28/04/2022 at 10:00:05 a. m.
+ *********************************************/
+ 
+ Highway_segments_number = 8;
+ Officers_available = 25;
+ Upper_bound = [4, 8, 5, 7, 6, 5, 6, 4];
+ Reduction_potential = [11, 3, 4, 14, 2, 19, 10, 13];
