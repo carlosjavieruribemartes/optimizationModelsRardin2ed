@@ -7,6 +7,12 @@
 			<ref name="Application_4_9.dat" type="data">
 			</ref>
 		</config>
+		<config default="false" name="Conf2Stochastic" category="opl">
+			<ref name="Stochastic_programming_model.mod" type="model">
+			</ref>
+			<ref name="Application_4_9.dat" type="data">
+			</ref>
+		</config>
 	</configs>
 	
 </project>
