@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+	<version>1.0</version>
+	<configs>
+		<config default="true" name="Conf1Deterministic" category="opl">
+			<ref name="Deterministic_model.mod" type="model">
+			</ref>
+			<ref name="Application_4_9.dat" type="data">
+			</ref>
+		</config>
+	</configs>
+	
+</project>
