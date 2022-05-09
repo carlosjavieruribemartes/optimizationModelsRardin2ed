@@ -19,3 +19,6 @@ In this repository, I will be adding Applications and Examples shown in the book
  - Application 4.8: Virginia Prestress (VP) Location (Linearized model)
  - Application 4.9: Quick Aid (QA)
  - Example 4.11: Recognizing 2-Stage Stochastic Settings 
+
+### Chapter 5
+ - Application 5.1: Top Brass Trophy
