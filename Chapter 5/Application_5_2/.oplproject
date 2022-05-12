@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+	<version>1.0</version>
+	<configs>
+		<config default="true" name="Config1" category="opl">
+			<ref name="Application_5_2.mod" type="model">
+			</ref>
+		</config>
+	</configs>
+	
+</project>

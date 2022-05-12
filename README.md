@@ -22,3 +22,4 @@ In this repository, I will be adding Applications and Examples shown in the book
 
 ### Chapter 5
  - Application 5.1: Top Brass Trophy
+ - Application 5.2: Clever Clyde
